@@ -69,6 +69,8 @@ html {
   font-weight: 500;
   box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.25);
   transition: all 0.2s;
+  cursor: pointer;
+  border: none;
 }
 
 .btn-primary:hover {
@@ -87,6 +89,7 @@ html {
   font-weight: 500;
   border: 1px solid #e2e8f0;
   transition: all 0.2s;
+  cursor: pointer;
 }
 
 .btn-secondary:hover {
@@ -114,6 +117,8 @@ html {
   font-weight: 500;
   box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.25);
   transition: all 0.2s;
+  cursor: pointer;
+  border: none;
 }
 
 .btn-success:hover {
@@ -131,6 +136,8 @@ html {
   font-weight: 500;
   font-size: 0.875rem;
   transition: all 0.2s;
+  cursor: pointer;
+  border: none;
 }
 
 .btn-danger:hover {
@@ -281,8 +288,54 @@ html {
 .stat-card {
   padding: 1.5rem;
   border-radius: 1rem;
-  background: linear-gradient(to bottom right, var(--stat-from), var(--stat-to));
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: white;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s;
+}
+
+.stat-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .stat-card {
+    background: #1e293b;
+    border-color: #334155;
+  }
+}
+
+/* Select/Dropdown Field */
+.select-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  background: white;
+  color: #0f172a;
+  outline: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+.select-field:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  .select-field {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: white;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  }
 }
 
 /* Animations */
@@ -323,4 +376,35 @@ html {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/* Animation Delays */
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #64748b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .empty-state {
+    color: #94a3b8;
+  }
+}
+
+/* Focus visible for accessibility */
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-success:focus-visible,
+.btn-danger:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
 }

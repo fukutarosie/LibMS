@@ -246,7 +246,7 @@ export default function BorrowingsPage() {
                   <select
                     value={formData.bookId}
                     onChange={(e) => setFormData({ ...formData, bookId: e.target.value })}
-                    className="input-field"
+                    className="select-field"
                     required
                   >
                     <option value="">Choose a book...</option>
@@ -264,7 +264,7 @@ export default function BorrowingsPage() {
                   <select
                     value={formData.memberId}
                     onChange={(e) => setFormData({ ...formData, memberId: e.target.value })}
-                    className="input-field"
+                    className="select-field"
                     required
                   >
                     <option value="">Choose a member...</option>
